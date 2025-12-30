@@ -3,49 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.ibm.praticetestNG.LoginAutomation">
-        <methods>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.ibm.praticetestNG.LoginAutomation -->
       <class name="com.ibm.praticetestNG.CheckoutOverviewAutomation">
         <methods>
-          <include name="tearDown"/>
           <include name="Setup"/>
+          <include name="tearDown"/>
           <include name="finishButton"/>
         </methods>
       </class> <!-- com.ibm.praticetestNG.CheckoutOverviewAutomation -->
-      <class name="com.ibm.praticetestNG.InventoryItemAutomation">
-        <methods>
-          <include name="inventoryItem"/>
-          <include name="addToCart"/>
-          <include name="tearDown"/>
-          <include name="Setup"/>
-          <include name="removeButton"/>
-        </methods>
-      </class> <!-- com.ibm.praticetestNG.InventoryItemAutomation -->
-      <class name="com.ibm.praticetestNG.CheckoutInfoAutomation">
-        <methods>
-          <include name="checkoutInformatioinWithoutFeild"/>
-          <include name="checkoutInformationWithFeild"/>
-          <include name="Setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.ibm.praticetestNG.CheckoutInfoAutomation -->
-      <class name="com.ibm.praticetestNG.ShoppingCartContainerAutomation">
-        <methods>
-          <include name="shoppingCart"/>
-          <include name="Setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.ibm.praticetestNG.ShoppingCartContainerAutomation -->
-      <class name="com.ibm.praticetestNG.CheckoutAutomation">
-        <methods>
-          <include name="Setup"/>
-          <include name="tearDown"/>
-          <include name="checkoutButton"/>
-        </methods>
-      </class> <!-- com.ibm.praticetestNG.CheckoutAutomation -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

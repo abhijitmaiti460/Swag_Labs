@@ -15,10 +15,10 @@ public class ShoppingCartContainerAutomation extends BaseClass{
 		WebElement cart = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a"));
 		cart.click();
 		Thread.sleep(1000);
-		removeButtonInShoppingCart();
+		
 			
 	}
-	
+	@Test(dependsOnMethods = "shoppingCart")
 	public void removeButtonInShoppingCart() throws InterruptedException {
 		List<WebElement> removeButtonsList = driver.findElements(
 		        By.cssSelector(".btn.btn_secondary.btn_small.cart_button"));

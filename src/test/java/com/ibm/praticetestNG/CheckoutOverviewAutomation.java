@@ -17,5 +17,13 @@ public class CheckoutOverviewAutomation extends BaseClass {
 		
 		driver.findElement(By.id("back-to-products")).click();
 		Thread.sleep(1000);
+		
+		WebElement cart = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a"));
+		cart.click();
+		Thread.sleep(1000);
+		
+		WebElement continueButton = driver.findElement(By.id("continue-shopping"));
+		continueButton.click();
+		Thread.sleep(1000);
 	}
 }

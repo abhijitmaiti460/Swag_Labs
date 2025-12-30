@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class InventoryItemAutomation extends BaseClass {
 
-	@Test(priority = 1)
+	@Test
 	public void inventoryItem() throws InterruptedException {
 		List<WebElement> list =  driver.findElements(By.cssSelector("div[data-test='inventory-item-name']"));
 		new HoverOverScroll(list, driver);
@@ -18,7 +18,7 @@ public class InventoryItemAutomation extends BaseClass {
 		new Actions(driver).moveToElement(list.get(2)).click().perform();
 	}
 	
-	@Test(priority = 2)
+	@Test(dependsOnMethods = "inventoryItem")
 	public void addToCart() throws InterruptedException {
 
 		WebElement addToCartButton = driver.findElement(By.id("add-to-cart"));
@@ -43,7 +43,7 @@ public class InventoryItemAutomation extends BaseClass {
 		
 		
 	}
-	@Test(priority = 3)
+	@Test(dependsOnMethods = "addToCart")
 	public void removeButton() throws InterruptedException {
 		List<WebElement> removeButtonsList = driver.findElements(
 		        By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory"));

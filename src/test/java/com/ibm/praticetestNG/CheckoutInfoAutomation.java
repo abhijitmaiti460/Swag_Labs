@@ -7,7 +7,14 @@ import org.testng.annotations.Test;
 
 
 public class CheckoutInfoAutomation extends BaseClass {
-	@Test(priority = 2)
+	
+	@Test
+	public void  checkoutInformatioinWithoutFeild() throws InterruptedException {
+		Thread.sleep(1000);
+		continueButton(false);
+	}
+	
+	@Test(dependsOnMethods ="checkoutInformatioinWithoutFeild" )
 	public void checkoutInformationWithFeild() throws InterruptedException {
 		WebElement firstNamInputFeild = driver.findElement(By.id("first-name"));
 		firstNamInputFeild.sendKeys("Abhijit");
@@ -24,12 +31,6 @@ public class CheckoutInfoAutomation extends BaseClass {
 		continueButton(true);
 	
 	}
-	@Test(priority = 1)
-	public void  checkoutInformatioinWithoutFeild() throws InterruptedException {
-		Thread.sleep(1000);
-		continueButton(false);
-	}
-	
 	
 	public void continueButton(Boolean isValue) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

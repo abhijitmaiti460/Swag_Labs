@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ibm.praticetestNG.CheckoutOverviewAutomation">
+      <class name="com.ibm.praticetestNG.ShoppingCartContainerAutomation">
         <methods>
+          <include name="shoppingCart"/>
           <include name="tearDown"/>
           <include name="Setup"/>
-          <include name="finishButton"/>
+          <include name="removeButtonInShoppingCart"/>
         </methods>
-      </class> <!-- com.ibm.praticetestNG.CheckoutOverviewAutomation -->
+      </class> <!-- com.ibm.praticetestNG.ShoppingCartContainerAutomation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

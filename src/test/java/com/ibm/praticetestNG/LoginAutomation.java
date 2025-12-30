@@ -6,20 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginAutomation extends BaseClass {
 	
-	@Test(priority = 2 )
-	public void loginWithValidUsernameAndPassword() throws InterruptedException {
-		WebElement username = driver.findElement(By.id("user-name"));
-		username.sendKeys("standard_user");
-		Thread.sleep(1000);
-		WebElement password = driver.findElement(By.id("password"));
-		password.sendKeys("secret_sauce");
-		
-		WebElement loginButton = driver.findElement(By.id("login-button"));
-		loginButton.click();
-		
-	}
-	
-	@Test(priority = 1)
+	@Test
 	public void loginWithInvalidUsernameOrPassword() throws InterruptedException {
 		WebElement username = driver.findElement(By.id("user-name"));
 		username.sendKeys("standard");
@@ -36,6 +23,19 @@ public class LoginAutomation extends BaseClass {
 		
 		username.clear();
 		password.clear();
+	}
+	
+	@Test(dependsOnMethods ="loginWithInvalidUsernameOrPassword")
+	public void loginWithValidUsernameAndPassword() throws InterruptedException {
+		WebElement username = driver.findElement(By.id("user-name"));
+		username.sendKeys("standard_user");
+		Thread.sleep(1000);
+		WebElement password = driver.findElement(By.id("password"));
+		password.sendKeys("secret_sauce");
+		
+		WebElement loginButton = driver.findElement(By.id("login-button"));
+		loginButton.click();
+		
 	}
 
 }
