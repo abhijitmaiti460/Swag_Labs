@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="com.ibm.praticetestNG.LoginAutomation"/>
+      <class name="com.ibm.praticetestNG.BurgerButtonContainElementAutomation"/>
+       <class name="com.ibm.praticetestNG.ProductSortContainerAutomation"/>
+       <class name="com.ibm.praticetestNG.InventoryItemAutomation"/>
+        <class name="com.ibm.praticetestNG.ShoppingCartContainerAutomation"/>
+        <class name="com.ibm.praticetestNG.CheckoutAutomation"/>
+        <class name="com.ibm.praticetestNG.CheckoutInfoAutomation"/>
+         <class name="com.ibm.praticetestNG.CheckoutOverviewAutomation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
